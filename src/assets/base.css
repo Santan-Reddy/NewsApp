@@ -1,0 +1,21 @@
+:root {
+  --background-primary: #f8eded;
+  --background-secondary: #f9f0f0;
+  --navbar-hover: #e2b6b6;
+  --text-primary: #0f0606;
+  --colour-1: #ff8225;
+  --colour-2: #b43f3f;
+  --colour-3: #173b45;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--background-primary);
+  font-family: 'Courier New', Courier, monospace;
+}
