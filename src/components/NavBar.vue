@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref, onUnmounted } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const isTopOfPage = ref(true)
 
@@ -21,12 +22,14 @@ onUnmounted(() => {
 
 <template>
   <nav :class="{ scrolled: !isTopOfPage }">
-    <div class="icon"><img src="../assets/images/logo.png" alt="" />News</div>
+    <div class="icon">
+      <img src="../assets/images/logo.png" alt="" /><router-link to="/">News</router-link>
+    </div>
     <div class="menu">
       <ul>
-        <li>Home</li>
-        <li>Saved News</li>
-        <li>Liked News</li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/saved-news">Saved News</router-link></li>
+        <li><router-link to="/liked-news">Liked News</router-link></li>
       </ul>
     </div>
   </nav>
@@ -45,6 +48,10 @@ nav {
   padding: 10px;
   justify-content: space-around;
   align-items: center;
+  a {
+    text-decoration: none;
+    color: var(--text-primary);
+  }
   .icon {
     padding: 10px 20px;
     display: flex;
@@ -64,6 +71,10 @@ nav {
         padding: 10px 20px;
         margin: 0 10px;
         border-radius: 5px;
+        a {
+          text-decoration: none;
+          color: var(--text-primary);
+        }
       }
       li:hover {
         background-color: var(--navbar-hover);

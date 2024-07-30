@@ -6,7 +6,7 @@ import NewsBody from './components/NewsBody.vue'
 <template>
   <NavBar />
   <body>
-    <NewsBody />
+    <router-view />
   </body>
 </template>
 
